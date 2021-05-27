@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="mtg.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:mtg"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1100" Height="692">
+
+    <Grid RequestedTheme="Default" Margin="0,0,0,10" HorizontalAlignment="Right" Width="1100">
+        <Button x:Name="parse" Content="Clean" Click="ParseButton_Click" Margin="0,319,0,0" VerticalAlignment="Top" Height="32" Width="55" HorizontalAlignment="Center"/>
+        <TextBox x:Name="input" Header ="Original" HorizontalAlignment="Left" Margin="25,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="591" Width="444" AcceptsReturn="True"/>
+        <TextBox x:Name="output" Header ="Cleaned" IsReadOnly = "True" Margin="623,39,25,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="591" AcceptsReturn="True" Width="444"/>
+        <Button x:Name="cpToCB" Content="Copy to clipboard" Margin="784,649,0,0" VerticalAlignment="Top" Click="cpToCB_Click" Height="32" Width="131"/>
+        <Button x:Name="nuke" Content="Erase" Margin="525,365,0,0" VerticalAlignment="Top" Click="nuke_Click" RenderTransformOrigin="1.321,0.594"/>
+        <Button x:Name ="pFromCB" Content="Paste from clipboard" Margin="173,649,0,0" VerticalAlignment="Top" Click="pFromCB_Click"/>
+    </Grid>
+</Page>
